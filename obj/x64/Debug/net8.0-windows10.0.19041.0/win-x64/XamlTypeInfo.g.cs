@@ -226,7 +226,7 @@ namespace WinUI.WinUI_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[22];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -236,14 +236,21 @@ namespace WinUI.WinUI_XamlTypeInfo
             _typeNameTable[6] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
             _typeNameTable[7] = "System.Enum";
             _typeNameTable[8] = "System.ValueType";
-            _typeNameTable[9] = "WinUI.MainWindow";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[11] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[12] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[13] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[14] = "Int32";
+            _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.TitleBar";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[12] = "String";
+            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[14] = "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
+            _typeNameTable[15] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[16] = "System.Nullable`1<Boolean>";
+            _typeNameTable[17] = "WinUI.MainWindow";
+            _typeNameTable[18] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[20] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[21] = "Int32";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[22];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -253,12 +260,19 @@ namespace WinUI.WinUI_XamlTypeInfo
             _typeTable[6] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
             _typeTable[7] = typeof(global::System.Enum);
             _typeTable[8] = typeof(global::System.ValueType);
-            _typeTable[9] = typeof(global::WinUI.MainWindow);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[13] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[14] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBar);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[12] = typeof(global::System.String);
+            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings);
+            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[16] = typeof(global::System.Nullable<global::System.Boolean>);
+            _typeTable[17] = typeof(global::WinUI.MainWindow);
+            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[20] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[21] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -295,16 +309,21 @@ namespace WinUI.WinUI_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_9_MainWindow() { return new global::WinUI.MainWindow(); }
-        private object Activate_11_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_9_TitleBar() { return new global::Microsoft.UI.Xaml.Controls.TitleBar(); }
+        private object Activate_14_TitleBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings(); }
+        private object Activate_17_MainWindow() { return new global::WinUI.MainWindow(); }
+        private object Activate_19_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
         private void StaticInitializer_6_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
         private void StaticInitializer_7_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
         private void StaticInitializer_8_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
-        private void StaticInitializer_9_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WinUI.MainWindow).TypeHandle);
-        private void StaticInitializer_11_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_13_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_9_TitleBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBar).TypeHandle);
+        private void StaticInitializer_14_TitleBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings).TypeHandle);
+        private void StaticInitializer_16_Nullable() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Nullable<global::System.Boolean>).TypeHandle);
+        private void StaticInitializer_17_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::WinUI.MainWindow).TypeHandle);
+        private void StaticInitializer_19_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_20_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -312,7 +331,7 @@ namespace WinUI.WinUI_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_13_IList(object instance, object item)
+        private void VectorAdd_20_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -382,22 +401,78 @@ namespace WinUI.WinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  WinUI.MainWindow
+            case 9:   //  Microsoft.UI.Xaml.Controls.TitleBar
+                userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_9_TitleBar;
+                userType.StaticInitializer = StaticInitializer_9_TitleBar;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TitleBar.Content");
+                userType.AddMemberName("Content");
+                userType.AddMemberName("Title");
+                userType.AddMemberName("IconSource");
+                userType.AddMemberName("AutoRefreshDragRegions");
+                userType.AddMemberName("IsBackButtonEnabled");
+                userType.AddMemberName("IsBackButtonVisible");
+                userType.AddMemberName("IsPaneToggleButtonVisible");
+                userType.AddMemberName("LeftHeader");
+                userType.AddMemberName("RightHeader");
+                userType.AddMemberName("Subtitle");
+                userType.AddMemberName("TemplateSettings");
+                userType.AddMemberName("IsDragRegion");
+                xamlType = userType;
+                break;
+
+            case 10:   //  Microsoft.UI.Xaml.Controls.Control
+                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Microsoft.UI.Xaml.UIElement
+                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 12:   //  String
+                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 13:   //  Microsoft.UI.Xaml.Controls.IconSource
+                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
+                userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.StaticInitializer = StaticInitializer_14_TitleBarTemplateSettings;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 15:   //  Microsoft.UI.Xaml.DependencyObject
+                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  System.Nullable`1<Boolean>
+                userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetBoxedType(GetXamlTypeByName("Boolean"));
+                userType.BoxInstance = userType.BoxType<global::System.Boolean>;
+                userType.StaticInitializer = StaticInitializer_16_Nullable;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 17:   //  WinUI.MainWindow
                 userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_9_MainWindow;
-                userType.StaticInitializer = StaticInitializer_9_MainWindow;
+                userType.Activator = Activate_17_MainWindow;
+                userType.StaticInitializer = StaticInitializer_17_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.Window
+            case 18:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 19:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_11_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_11_TreeViewNode;
+                userType.Activator = Activate_19_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_19_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -409,19 +484,15 @@ namespace WinUI.WinUI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 12:   //  Microsoft.UI.Xaml.DependencyObject
-                xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 13:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 20:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::WinUI.WinUI_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_13_IList;
-                userType.CollectionAdd = VectorAdd_13_IList;
+                userType.StaticInitializer = StaticInitializer_20_IList;
+                userType.CollectionAdd = VectorAdd_20_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Int32
+            case 21:   //  Int32
                 xamlType = new global::WinUI.WinUI_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -503,52 +574,165 @@ namespace WinUI.WinUI_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Media.MicaBackdrop)instance;
             that.Kind = (global::Microsoft.UI.Composition.SystemBackdrops.MicaKind)Value;
         }
-        private object get_2_TreeViewNode_Children(object instance)
+        private object get_2_TitleBar_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.Content;
+        }
+        private void set_2_TitleBar_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.Content = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_3_TitleBar_Title(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.Title;
+        }
+        private void set_3_TitleBar_Title(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.Title = (global::System.String)Value;
+        }
+        private object get_4_TitleBar_IconSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.IconSource;
+        }
+        private void set_4_TitleBar_IconSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.IconSource = (global::Microsoft.UI.Xaml.Controls.IconSource)Value;
+        }
+        private object get_5_TitleBar_AutoRefreshDragRegions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.AutoRefreshDragRegions;
+        }
+        private void set_5_TitleBar_AutoRefreshDragRegions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.AutoRefreshDragRegions = (global::System.Boolean)Value;
+        }
+        private object get_6_TitleBar_IsBackButtonEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.IsBackButtonEnabled;
+        }
+        private void set_6_TitleBar_IsBackButtonEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.IsBackButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_7_TitleBar_IsBackButtonVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.IsBackButtonVisible;
+        }
+        private void set_7_TitleBar_IsBackButtonVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.IsBackButtonVisible = (global::System.Boolean)Value;
+        }
+        private object get_8_TitleBar_IsPaneToggleButtonVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.IsPaneToggleButtonVisible;
+        }
+        private void set_8_TitleBar_IsPaneToggleButtonVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.IsPaneToggleButtonVisible = (global::System.Boolean)Value;
+        }
+        private object get_9_TitleBar_LeftHeader(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.LeftHeader;
+        }
+        private void set_9_TitleBar_LeftHeader(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.LeftHeader = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_10_TitleBar_RightHeader(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.RightHeader;
+        }
+        private void set_10_TitleBar_RightHeader(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.RightHeader = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_11_TitleBar_Subtitle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.Subtitle;
+        }
+        private void set_11_TitleBar_Subtitle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            that.Subtitle = (global::System.String)Value;
+        }
+        private object get_12_TitleBar_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TitleBar)instance;
+            return that.TemplateSettings;
+        }
+        private object get_13_TitleBar_IsDragRegion(object instance)
+        {
+            return global::Microsoft.UI.Xaml.Controls.TitleBar.GetIsDragRegion((global::Microsoft.UI.Xaml.UIElement)instance);
+        }
+        private void set_13_TitleBar_IsDragRegion(object instance, object Value)
+        {
+            global::Microsoft.UI.Xaml.Controls.TitleBar.SetIsDragRegion((global::Microsoft.UI.Xaml.UIElement)instance, (global::System.Nullable<global::System.Boolean>)Value);
+        }
+        private object get_14_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_3_TreeViewNode_Content(object instance)
+        private object get_15_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_3_TreeViewNode_Content(object instance, object Value)
+        private void set_15_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_4_TreeViewNode_Depth(object instance)
+        private object get_16_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_5_TreeViewNode_HasChildren(object instance)
+        private object get_17_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_6_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_18_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_6_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_18_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_7_TreeViewNode_IsExpanded(object instance)
+        private object get_19_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_7_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_19_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_8_TreeViewNode_Parent(object instance)
+        private object get_20_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -575,50 +759,136 @@ namespace WinUI.WinUI_XamlTypeInfo
                 xamlMember.Getter = get_1_MicaBackdrop_Kind;
                 xamlMember.Setter = set_1_MicaBackdrop_Kind;
                 break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.Content":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_TitleBar_Content;
+                xamlMember.Setter = set_2_TitleBar_Content;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.Title":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Title", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_3_TitleBar_Title;
+                xamlMember.Setter = set_3_TitleBar_Title;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.IconSource":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_4_TitleBar_IconSource;
+                xamlMember.Setter = set_4_TitleBar_IconSource;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.AutoRefreshDragRegions":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "AutoRefreshDragRegions", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_TitleBar_AutoRefreshDragRegions;
+                xamlMember.Setter = set_5_TitleBar_AutoRefreshDragRegions;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.IsBackButtonEnabled":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IsBackButtonEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_6_TitleBar_IsBackButtonEnabled;
+                xamlMember.Setter = set_6_TitleBar_IsBackButtonEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.IsBackButtonVisible":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_7_TitleBar_IsBackButtonVisible;
+                xamlMember.Setter = set_7_TitleBar_IsBackButtonVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.IsPaneToggleButtonVisible":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_8_TitleBar_IsPaneToggleButtonVisible;
+                xamlMember.Setter = set_8_TitleBar_IsPaneToggleButtonVisible;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.LeftHeader":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "LeftHeader", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_9_TitleBar_LeftHeader;
+                xamlMember.Setter = set_9_TitleBar_LeftHeader;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.RightHeader":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "RightHeader", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_10_TitleBar_RightHeader;
+                xamlMember.Setter = set_10_TitleBar_RightHeader;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.Subtitle":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Subtitle", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_11_TitleBar_Subtitle;
+                xamlMember.Setter = set_11_TitleBar_Subtitle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.TemplateSettings":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_12_TitleBar_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TitleBar.IsDragRegion":
+                userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TitleBar");
+                xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IsDragRegion", "System.Nullable`1<Boolean>");
+                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.UIElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_13_TitleBar_IsDragRegion;
+                xamlMember.Setter = set_13_TitleBar_IsDragRegion;
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_2_TreeViewNode_Children;
+                xamlMember.Getter = get_14_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_TreeViewNode_Content;
-                xamlMember.Setter = set_3_TreeViewNode_Content;
+                xamlMember.Getter = get_15_TreeViewNode_Content;
+                xamlMember.Setter = set_15_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_TreeViewNode_Depth;
+                xamlMember.Getter = get_16_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_17_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_6_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_6_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_18_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_18_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_7_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_19_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_19_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::WinUI.WinUI_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::WinUI.WinUI_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_8_TreeViewNode_Parent;
+                xamlMember.Getter = get_20_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

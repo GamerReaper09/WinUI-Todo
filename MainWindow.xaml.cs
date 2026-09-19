@@ -26,6 +26,8 @@ namespace WinUI
         public MainWindow()
         {
             InitializeComponent();
+            ExtendsContentIntoTitleBar = true;
+            SetTitleBar(AppTitleBar);
         }
     }
 }

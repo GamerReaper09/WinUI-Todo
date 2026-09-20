@@ -12,19 +12,43 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Windows.Storage;
+using System.IO.Enumeration;
+using WinUI.Models;
+
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace WinUI;
+namespace WinUI.Views;
 
 /// <summary>
 /// An empty page that can be used on its own or navigated to within a Frame.
 /// </summary>
 public sealed partial class NotePage : Page
 {
+    public Note noteModel { get; set; } = new Note();
+
     public NotePage()
     {
         InitializeComponent();
+    }
+    
+    private async void SaveButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (noteModel is not null)
+        {
+            await noteModel.SaveAsync();
+        }
+        
+    }
+
+    private async void DeleteButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (noteModel is not null)
+        {
+            await noteModel.DeleteAsync();
+        }
     }
 }

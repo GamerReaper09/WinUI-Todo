@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="WinUI.NotePage"
+    x:Class="WinUI.Views.NotePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WinUI"
@@ -20,18 +20,21 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="NoteEditor"
-                 PlaceholderText="Enter your note here..."
-                 Header="New note"
-                 TextWrapping="Wrap"
+                 Text="{x:Bind noteModel.Text, Mode=TwoWay}"
                  AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 PlaceholderText="Enter your note"
+                 Header="{x:Bind noteModel.Date.ToString()}"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 Width="400"
                  Grid.Column="1"/>
 
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     Spacing="4"
                     Grid.Row="1" Grid.Column="1">
-            <Button Content="Save" Style="{StaticResource AccentButtonStyle}"/>
-            <Button Content="Delete"/>
+            <Button Content="Save" Style="{StaticResource AccentButtonStyle}" Click="SaveButton_Click"/>
+            <Button Content="Delete" Click="DeleteButton_Click"/>
         </StackPanel>
 
     </Grid>

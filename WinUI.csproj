@@ -15,6 +15,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="NotePage.xaml" />
+    <None Remove="Views\AllNotesPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,12 +45,14 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="NotePage.xaml">
+    <Page Update="Views\AllNotesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
+    <Page Update="NotePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!--

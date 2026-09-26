@@ -12,6 +12,9 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using WinUI.Models;
+using System.Security.Cryptography.X509Certificates;
+using System.Collections.ObjectModel;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,9 +26,12 @@ namespace WinUI.Views;
 /// </summary>
 public sealed partial class ToDoPage : Page
 {
+    public ObservableCollection<ToDoModel> ToDos { get; } = new();
     public ToDoPage()
     {
+        ToDos.Add(new ToDoModel("Sample Task 1", "This is a sample task."));
+        ToDos.Add(new ToDoModel("Sample Task 2", "This is another sample task."));
+        ToDos.Add(new ToDoModel("Sample Task 3", "This is yet another sample task."));
         InitializeComponent();
-        ToDoListView.ItemsSource = new List<string> { "Task 1", "Task 2", "Task 3" };
     }
 }

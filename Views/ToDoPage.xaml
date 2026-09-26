@@ -27,10 +27,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{x:Bind ToDos}" ItemTemplate="{StaticResource ToDoTemplate}" Grid.Column="0" BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" CornerRadius="4"/>
+        <ListView ItemsSource="{x:Bind allToDos.ToDos}" ItemTemplate="{StaticResource ToDoTemplate}" Grid.Column="0" BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" CornerRadius="4"/>
         <StackPanel Grid.Column="1" Orientation="Vertical" Spacing="12">
-            <Button Content="Add Task" Grid.Column="1"/>
-            <Button Content="Remove Task" Grid.Column="1"/>
+            <Button Content="Add Task" Grid.Column="1" Click="AddToDo_Click"/>
+            <Button Content="Remove Task" Grid.Column="1" Click="DeleteToDo_Click"/>
         </StackPanel>
     </Grid>
 </Page>

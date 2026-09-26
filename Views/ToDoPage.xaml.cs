@@ -26,12 +26,21 @@ namespace WinUI.Views;
 /// </summary>
 public sealed partial class ToDoPage : Page
 {
-    public ObservableCollection<ToDoModel> ToDos { get; } = new();
+    private AllToDos allToDos = new();
+
     public ToDoPage()
     {
-        ToDos.Add(new ToDoModel("Sample Task 1", "This is a sample task."));
-        ToDos.Add(new ToDoModel("Sample Task 2", "This is another sample task."));
-        ToDos.Add(new ToDoModel("Sample Task 3", "This is yet another sample task."));
         InitializeComponent();
+    }
+
+    private void AddToDo_Click(object sender, RoutedEventArgs e)
+    {
+        allToDos.AddToDo("New Task", "This is a new task.");
+    }
+
+    private void DeleteToDo_Click(object sender, RoutedEventArgs e)
+    {
+        
+
     }
 }

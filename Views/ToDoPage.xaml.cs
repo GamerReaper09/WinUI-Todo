@@ -40,7 +40,9 @@ public sealed partial class ToDoPage : Page
 
     private void DeleteToDo_Click(object sender, RoutedEventArgs e)
     {
-        
-
+        if (ToDoListView.SelectedItem is ToDoModel selectedToDo)
+        {
+            allToDos.ToDos.Remove(selectedToDo);
+        }
     }
 }

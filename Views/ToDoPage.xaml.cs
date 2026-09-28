@@ -31,18 +31,20 @@ public sealed partial class ToDoPage : Page
     public ToDoPage()
     {
         InitializeComponent();
+        this.Loaded += async (sender, e) => await allToDos.LoadAsync();
     }
 
-    private void AddToDo_Click(object sender, RoutedEventArgs e)
+    private async void AddToDo_Click(object sender, RoutedEventArgs e)
     {
-        allToDos.AddToDo("New Task", "This is a new task.");
+        await allToDos.AddToDo("New Task", "This is a new task.");
     }
 
-    private void DeleteToDo_Click(object sender, RoutedEventArgs e)
+    private async void DeleteToDo_Click(object sender, RoutedEventArgs e)
     {
         if (ToDoListView.SelectedItem is ToDoModel selectedToDo)
         {
             allToDos.ToDos.Remove(selectedToDo);
+            await allToDos.SaveAsync();
         }
     }
 }

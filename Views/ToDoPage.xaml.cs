@@ -27,6 +27,7 @@ namespace WinUI.Views;
 public sealed partial class ToDoPage : Page
 {
     private AllToDos allToDos = new();
+    private AddToDoWindow? addToDoWindow;
 
     public ToDoPage()
     {
@@ -36,7 +37,14 @@ public sealed partial class ToDoPage : Page
 
     private async void AddToDo_Click(object sender, RoutedEventArgs e)
     {
-        await allToDos.AddToDo("New Task", "This is a new task.");
+        if (addToDoWindow == null)
+        {
+            addToDoWindow = new AddToDoWindow();
+            addToDoWindow.Closed += (_, _) => addToDoWindow = null;
+
+
+        }
+        addToDoWindow.Activate();
     }
 
     private async void DeleteToDo_Click(object sender, RoutedEventArgs e)

@@ -12,6 +12,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using WinUI.Models;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,6 +27,13 @@ public sealed partial class AddToDoWindow : Window
     public AddToDoWindow()
     {
         InitializeComponent();
-        AppWindow.ResizeClient(new Windows.Graphics.SizeInt32(400, 500));
+        ExtendsContentIntoTitleBar = true;
+        SetTitleBar(AddTitleBar);
+        AppWindow.ResizeClient(new Windows.Graphics.SizeInt32(400, 300));
+    }
+
+    private void SaveButton_Click(object sender, RoutedEventArgs e)
+    {
+        
     }
 }

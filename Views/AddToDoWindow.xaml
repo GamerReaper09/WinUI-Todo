@@ -10,10 +10,40 @@
     Title="AddToDoWindow">
 
     <Window.SystemBackdrop>
-        <MicaBackdrop />
+        <MicaBackdrop Kind="Base"/>
     </Window.SystemBackdrop>
 
-    <Grid>
+    <Grid Padding="20,5,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TitleBar x:Name="AddTitleBar" Title="Add Todo">
+            <TitleBar.IconSource>
+                <FontIconSource Glyph="&#xE70F;"/>
+            </TitleBar.IconSource>
+        </TitleBar>
+        <Grid Grid.Row="1" RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox FontSize="20" Height="40" Grid.Row="0" PlaceholderText="Title"/>
+            <TextBox PlaceholderText="Add body" AcceptsReturn="True" Grid.Row="1"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <CalendarDatePicker  Grid.Row="2"/>
+            <Button Content="Save Todo" Grid.Row="2" Margin="10" Click="SaveButton_Click"/>
+        </StackPanel>
+        
 
     </Grid>
 </Window>

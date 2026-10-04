@@ -13,10 +13,11 @@ namespace WinUI.Models
         public string Text { get; set; } = string.Empty;
         public DateTime Date { get; set; } = DateTime.Now;
 
-        public ToDoModel(string title, string text)
+        public ToDoModel(string title, string text, DateTime date)
         {
             Title = title;
             Text = text;
+            Date = date;
         }
     }
 }

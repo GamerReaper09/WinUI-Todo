@@ -17,9 +17,9 @@ namespace WinUI.Models
         public AllToDos()
         {
         }
-        public async Task AddToDo(string title, string text)
+        public async Task AddToDo(string title, string text, DateTime date)
         {
-            ToDos.Add(new ToDoModel(title, text));
+            ToDos.Add(new ToDoModel(title, text, date));
             await SaveAsync();
         }
         public async Task SaveAsync()

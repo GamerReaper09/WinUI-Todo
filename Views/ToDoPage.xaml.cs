@@ -26,7 +26,7 @@ namespace WinUI.Views;
 /// </summary>
 public sealed partial class ToDoPage : Page
 {
-    private AllToDos allToDos = new();
+    public AllToDos allToDos = new();
     private AddToDoWindow? addToDoWindow;
 
     public ToDoPage()
@@ -39,10 +39,8 @@ public sealed partial class ToDoPage : Page
     {
         if (addToDoWindow == null)
         {
-            addToDoWindow = new AddToDoWindow();
+            addToDoWindow = new AddToDoWindow(allToDos);
             addToDoWindow.Closed += (_, _) => addToDoWindow = null;
-
-
         }
         addToDoWindow.Activate();
     }

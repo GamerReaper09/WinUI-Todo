@@ -13,6 +13,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using WinUI.Models;
+using Microsoft.UI.Windowing;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -24,16 +25,35 @@ namespace WinUI.Views;
 /// </summary>
 public sealed partial class AddToDoWindow : Window
 {
-    public AddToDoWindow()
+    private readonly AllToDos allToDos;
+    public AddToDoWindow(AllToDos allToDos)
     {
         InitializeComponent();
+        this.allToDos = allToDos;
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AddTitleBar);
-        AppWindow.ResizeClient(new Windows.Graphics.SizeInt32(400, 300));
+
+        OverlappedPresenter presenter = OverlappedPresenter.Create();
+        presenter.IsAlwaysOnTop = true;
+        presenter.IsMaximizable = false;
+        presenter.IsMinimizable = false;
+        presenter.PreferredMinimumHeight = 300;
+        presenter.PreferredMinimumWidth = 400;
+        presenter.PreferredMaximumHeight = 600;
+        presenter.PreferredMaximumWidth = 800;
+
+        AppWindow.SetPresenter(presenter);
+
+
+        
+        AppWindow.Resize(new Windows.Graphics.SizeInt32(400, 300));
+        
     }
 
-    private void SaveButton_Click(object sender, RoutedEventArgs e)
+    private async void SaveButton_Click(object sender, RoutedEventArgs e)
     {
-        
+        DateTime date = CalendarDateInput.Date?.Date ?? DateTime.Now;
+        await allToDos.AddToDo(TitleTextBox.Text, BodyTextBox.Text,date);
+        this.Close();
     }
 }

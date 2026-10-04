@@ -12,6 +12,7 @@ namespace WinUI.Models
         public string Title { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
         public DateTime Date { get; set; } = DateTime.Now;
+        public string DateString => Date.ToString("d");
 
         public ToDoModel(string title, string text, DateTime date)
         {

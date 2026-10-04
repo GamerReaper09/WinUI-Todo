@@ -14,7 +14,7 @@
                 <StackPanel Orientation="Horizontal" Spacing="16">
                     <StackPanel Orientation="Vertical" Spacing="4">
                         <TextBlock Text="{x:Bind Title}" Style="{ThemeResource SubtitleTextBlockStyle}" VerticalAlignment="Center"/>
-                        <TextBlock Text="{x:Bind Date}" Style="{ThemeResource CaptionTextBlockStyle}" VerticalAlignment="Center"/>
+                        <TextBlock Text='{x:Bind DateString}' Style="{ThemeResource CaptionTextBlockStyle}" VerticalAlignment="Center"/>
                     </StackPanel>
                     <TextBlock Text="{x:Bind Text}" Style="{ThemeResource BodyTextBlockStyle}" VerticalAlignment="Center"/>
                 </StackPanel>

@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using System.Text.Json;
+using System.ComponentModel;
+using Microsoft.Windows.BadgeNotifications;
+using System.ComponentModel.DataAnnotations;
 
 namespace WinUI.Models
 {
@@ -22,9 +25,20 @@ namespace WinUI.Models
             ToDos.Add(new ToDoModel(title, text, date));
             await SaveAsync();
         }
+        private async Task sortCollection()
+        {
+            var sortedToDos = new ObservableCollection<ToDoModel>(ToDos.OrderBy(todo => todo.Date));
+            ToDos.Clear();
+            foreach (var todo in sortedToDos)
+            {
+                ToDos.Add(todo);
+            }
+        }
         public async Task SaveAsync()
 
         {
+            BadgeNotificationManager.Current.SetBadgeAsCount((uint)ToDos.Count);
+            await sortCollection();
             string json = JsonSerializer.Serialize(ToDos,jsonOptions);
             StorageFile file = await storageFolder.CreateFileAsync("todos.json", CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, json);

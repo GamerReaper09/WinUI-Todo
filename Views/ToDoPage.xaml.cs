@@ -15,6 +15,7 @@ using Microsoft.UI.Xaml.Navigation;
 using WinUI.Models;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -28,6 +29,7 @@ public sealed partial class ToDoPage : Page
 {
     public AllToDos allToDos = new();
     private AddToDoWindow? addToDoWindow;
+    private bool confirm = false;
 
     public ToDoPage()
     {
@@ -52,5 +54,29 @@ public sealed partial class ToDoPage : Page
             allToDos.ToDos.Remove(selectedToDo);
             await allToDos.SaveAsync();
         }
+    }
+
+    private async void ClearButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (!confirm)
+        {
+            confirm = true;
+            ClearButton.Content = "Confirm";
+            _ = ResetClearButton();
+            return;
+        }
+        else
+        {
+            confirm = false;
+            ClearButton.Content = "Clear All";
+            allToDos.ToDos.Clear();
+            await allToDos.SaveAsync();
+        }
+    }
+    private async Task ResetClearButton()
+    {
+        await Task.Delay(5000);
+        confirm = false;
+        ClearButton.Content = "Clear All";
     }
 }

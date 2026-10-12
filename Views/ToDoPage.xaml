@@ -10,8 +10,8 @@
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="ToDoTemplate" x:DataType="models:ToDoModel">
-            <Border BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" CornerRadius="4" Padding="12">
-                <StackPanel Orientation="Horizontal" Spacing="16">
+            <Border BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" CornerRadius="4" Padding="12" Background="{ThemeResource LayerOnMicaBaseAltFillColorSecondaryBrush}">
+                <StackPanel Orientation="Horizontal" Spacing="32">
                     <StackPanel Orientation="Vertical" Spacing="4">
                         <TextBlock Text="{x:Bind Title}" Style="{ThemeResource SubtitleTextBlockStyle}" VerticalAlignment="Center"/>
                         <TextBlock Text='{x:Bind DateString}' Style="{ThemeResource CaptionTextBlockStyle}" VerticalAlignment="Center"/>
@@ -29,8 +29,9 @@
         </Grid.ColumnDefinitions>
         <ListView x:Name="ToDoListView" ItemsSource="{x:Bind allToDos.ToDos}" ItemTemplate="{StaticResource ToDoTemplate}" Grid.Column="0" BorderThickness="1" BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" CornerRadius="4"/>
         <StackPanel Grid.Column="1" Orientation="Vertical" Spacing="12">
-            <Button Content="Add Task" Grid.Column="1" Click="AddToDo_Click"/>
-            <Button Content="Remove Task" Grid.Column="1" Click="DeleteToDo_Click" Background="{ThemeResource SystemFillColorCriticalBackgroundBrush}"/>
+            <Button Content="Add Task" Click="AddToDo_Click"/>
+            <Button Content="Remove Task" Click="DeleteToDo_Click" Background="{ThemeResource SystemFillColorCriticalBackgroundBrush}"/>
+            <Button x:Name="ClearButton" Content="Clear all" Click="ClearButton_Click" Background="{ThemeResource SystemFillColorCriticalBackgroundBrush}"/>
         </StackPanel>
     </Grid>
 </Page>

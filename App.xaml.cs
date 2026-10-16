@@ -35,6 +35,50 @@ namespace WinUI
         public App()
         {
             InitializeComponent();
+
+            // Log unhandled exceptions to a file so we can inspect crashes from installed packages
+            this.UnhandledException += App_UnhandledException;
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+            System.Threading.Tasks.TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
+        }
+
+        private void App_UnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)
+        {
+            try
+            {
+                LogException(e.Exception?.ToString() ?? "(null)");
+            }
+            catch { }
+        }
+
+        private void CurrentDomain_UnhandledException(object? sender, System.UnhandledExceptionEventArgs e)
+        {
+            try
+            {
+                LogException(e.ExceptionObject?.ToString() ?? "(null)");
+            }
+            catch { }
+        }
+
+        private void TaskScheduler_UnobservedTaskException(object? sender, System.Threading.Tasks.UnobservedTaskExceptionEventArgs e)
+        {
+            try
+            {
+                LogException(e.Exception?.ToString() ?? "(null)");
+            }
+            catch { }
+        }
+
+        private void LogException(string text)
+        {
+            try
+            {
+                var folder = Windows.Storage.ApplicationData.Current.LocalFolder;
+                var path = System.IO.Path.Combine(folder.Path, "startup-error.txt");
+                System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path) ?? folder.Path);
+                System.IO.File.AppendAllText(path, $"{DateTime.UtcNow:O} - {text}{Environment.NewLine}--------------------------------{Environment.NewLine}");
+            }
+            catch { }
         }
 
         /// <summary>

@@ -10,8 +10,8 @@
 
   <Identity
     Name="7fefad01-a86b-4753-89ed-819d53d75c8f"
-    Publisher="CN=vilme"
-    Version="1.0.0.0" />
+    Publisher="CN=reaper"
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="7fefad01-a86b-4753-89ed-819d53d75c8f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

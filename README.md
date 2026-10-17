@@ -11,7 +11,7 @@ This is a simple todo app made in C# using WinUI3.
 * Unlimited text
 
 ### How to run
-Download the zip from [releases](https://github.com/GamerReaper09/WinUI-Todo/releases/tag/release). Then extract somewhere on the computer. Install the certification. Finally install the msix and enjoy. The app is now available like any other program in the start menu named WinUI.
+Download the zip from [releases](https://github.com/GamerReaper09/WinUI-Todo/releases/tag/release). Then extract somewhere on the computer. Install the certification **(Important! Make sure to install the certificate into trusted people, don't let the wizard chose automatically)**. Finally install the msix and enjoy. The app is now available like any other program in the start menu named WinUI.
 
 ### How it is made
 It is made in C# using WinUI3 as a framework. Mostly built with the help of WinUI3 Gallery for examples and names.

@@ -14,8 +14,10 @@ There are no binaries for x86 or ARM64 but they could potentially be built yours
 ### How to run (.msix)
 Download the zip from [releases](https://github.com/GamerReaper09/WinUI-Todo/releases/tag/release). Then extract somewhere on the computer. Install the certification **(Important! Make sure to install the certificate into the store named "trusted people", don't let it chose automatically)**. Finally install the msix and enjoy. The app is now available like any other program in the start menu named WinUI.
 
-## How to run (.exe)
+### How to run (.exe)
 Download the zip from [releases](https://github.com/GamerReaper09/WinUI-Todo/releases/tag/exe). Then extract into a folder on the computer. Then find the "WinUI Blank App (Unpackaged).exe". And execute it to run the app. (Sorry for the bad name but it was due to the only solution to making an exe was to use a unpackaged template and rebuild the whole project into that template)
+
+(Notes will probably be shared between .msix version and .exe if both are used)
 
 ### Features
 * Simple ui
